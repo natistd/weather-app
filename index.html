@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app🌤️</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form id="search-city" class="search-bar">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Type a city..."
+                autofocus
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" class="btn btn-primary" value="Search" />
+            </div>
+          </div>
+        </form>
+        <h1></h1>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li class="current-temperature">⛅️</li>
+              <li id="current-temperature" class="current-temperature">29</li>
+              <li class="subtitle-degrees-link-c">
+                <a id="celsius-link" href="#">°C </a>
+              </li>
+              <li class="subtitle-degrees-link-c">|</li>
+              <li class="subtitle-degrees-link-f">
+                <a id="farenheit-link" href="#">°F</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h3>Weather</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 5%</li>
+              <li>Humidity: 80%</li>
+              <li>Wind: 13km/h <br /></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li id="current-date" class="subtitle-day-hour">Monday 18:00</li>
+              <li id="current-forecast" class="subtitle-day-hour">Cloudy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <ul>
+              <li>Mon</li>
+              <li class="emoji-forecast">⛈️</li>
+              <li><strong>31°</strong>25°</li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul>
+              <li>Tue</li>
+              <li class="emoji-forecast">🌤️</li>
+              <li><strong>33°</strong>26°</li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul>
+              <li>Wed</li>
+              <li class="emoji-forecast">🌤️</li>
+              <li><strong>32°</strong>26°</li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul>
+              <li>Thu</li>
+              <li class="emoji-forecast">🌤️</li>
+              <li><strong>32°</strong>26°</li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul>
+              <li>Fri</li>
+              <li class="emoji-forecast">🌤️</li>
+              <li><strong>32°</strong>26°</li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <ul>
+              <li>Sat</li>
+              <li class="emoji-forecast">🌧️</li>
+              <li><strong>32°</strong>26°</li>
+            </ul>
+          </div>
+        </div>
+        <footer>Coded by nataliaTD</footer>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
